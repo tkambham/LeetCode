@@ -7,18 +7,14 @@ class Solution {
                 nums.remove(nums.size()-1);
             }
             else if(operations[i].equals("D")){
-                nums.set(nums.size()-1, nums.get(nums.size()-1)*2);
-                Systems.output.println(nums.set(nums.size()-1, nums.get(nums.size()-1)*2));
+                nums.add(nums.get(nums.size()-1)*2);
             }
             else if(operations[i].equals("+")){
-                nums.add(nums.get(nums.size()-1)+nums.get(nums.size()-1));
-                System.output.println(nums.get(nums.size()-1)+nums.get(nums.size()-1));
+                nums.add(nums.get(nums.size()-1)+nums.get(nums.size()-2));
             }
             else{
                 nums.add(Integer.parseInt(operations[i]));
-                System.output.println(Integer.parseInt(operations[i]));
             }
-            
         }
         for(int i=0;i<nums.size();i++){
             sum += nums.get(i);
